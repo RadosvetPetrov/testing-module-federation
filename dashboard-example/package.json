@@ -1,0 +1,17 @@
+{
+  "name": "testing-module-federation-dashboard-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "./*"
+  ],
+  "scripts": {
+    "clean:all": "concurrently \"cd app1 && rm -rf node_modules\" \"cd app2 && rm -rf node_modules\"",
+    "install:all": "concurrently \"cd app1 && yarn\" \"cd app2 && yarn\"",
+    "start": "concurrently \"wsrun --parallel start\""
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "wsrun": "^5.2.1"
+  }
+}
