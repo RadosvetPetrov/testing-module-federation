@@ -1,0 +1,13 @@
+{
+  "name": "testing-module-federation-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "cd App && yarn && cd ../DesignSystem && yarn",
+    "start": "concurrently \"cd App && yarn start\" \"cd DesignSystem && yarn build && yarn serve"
+  },
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
